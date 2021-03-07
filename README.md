@@ -1,5 +1,5 @@
 # Water-Tracker
-This is a simple project that was made to allow it's users to keep track of their daily water count. It contains a simple and easy to use, user-friendly GUI.
+Water Tracker is a simple project that was made to allow it's users to keep track of their daily water count. It contains a simple and easy to use, user-friendly GUI.
 
 ## About The Project
 
