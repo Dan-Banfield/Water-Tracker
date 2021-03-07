@@ -1,0 +1,31 @@
+﻿<Window x:Name="Main" x:Class="Water_Tracker.MainWindow" AllowsTransparency="True"  Background="Transparent" WindowStyle="None"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Water_Tracker"
+        mc:Ignorable="d"
+        Title="Water Tracker" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="WaterIcon.png">
+    <Grid>
+        <Border x:Name="Background" BorderBrush="#FF1C1C1E"
+             BorderThickness="1.5"
+             CornerRadius="30"
+             Background="#FF1C1C1E" Margin="52,55,52,56" MouseMove="Background_MouseMove">
+            <Grid>
+                <Button x:Name="drinkButton" Content="DRINK" VerticalAlignment="Center" Margin="250,279,250,24" Background="#FF2949D7" BorderBrush="#FF4779EA" Click="drinkButton_Click"/>
+                <Label Content="Water Tracker" Foreground="White" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="45,10,489,285" FontFamily="Segoe UI Emoji" Width="158"/>
+                <ProgressBar x:Name="drinkProgressBar" Style="{StaticResource MaterialDesignCircularProgressBar}" Value="0" Height="70" Margin="496,103,112,144" Width="70" Foreground="#FF4779EA" Background="#FF2A2A2C"/>
+                <Image Source="WaterIcon.png" Margin="2,14,645,285" MouseDown="Image_OnMouseDownClickCount"/>
+                <Image Source="PngItem_2431065.png" Margin="493,128,112,167"/>
+                <Label Content="/8 cups" Foreground="#FF8B8B8B" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="152,142,454,153"/>
+                <Label x:Name="cupsAmountLabel" Content="0" Foreground="White" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="126,132,538,155" Height="48" Width="28"/>
+                <materialDesign:Snackbar
+                MessageQueue="{materialDesign:MessageQueue}"
+                x:Name="SnackbarThree" Message="Congratulions! You have had enough to drink today."/>
+                <Button x:Name="closeButton" Content="X" VerticalAlignment="Center" Margin="632,10,17,297" Background="#FF1C1C1E" BorderBrush="#FF4779EA" Click="closeButton_Click" Height="28"/>
+                <Button x:Name="minimizeButton" Content="-" VerticalAlignment="Center" Margin="584,10,65,297" Background="#FF1C1C1E" BorderBrush="#FF4779EA" Click="minimizeButton_Click" Height="28"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
